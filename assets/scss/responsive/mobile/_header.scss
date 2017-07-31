@@ -1,0 +1,42 @@
+#header {
+  min-width: $mobile-resolution;
+
+  .logo-home {
+    width: 43px;
+    background-image: url('../img/logo-mobile.png');
+
+    &:hover {
+      background-image: url('../img/logo-mobile-active.png');
+    }
+  }
+
+  .search-box {
+    .search-btn {
+      padding-left: 11px;
+    }
+  }
+
+  .wallet {
+    width: 54px;
+    padding: 0;
+  }
+
+  .mobile-menu {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 48px;
+    flex-shrink: 0;
+    border-bottom: 4px solid rgba(0, 0, 0, 0);
+    border-top: 4px solid rgba(0, 0, 0, 0);
+
+    &:hover {
+      border-bottom-color: $border-dark;
+    }
+
+    i {
+      font-size: 18px;
+    }
+  }
+}

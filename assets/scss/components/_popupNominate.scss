@@ -1,0 +1,115 @@
+.nominated-detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba($darken, 0.93);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+  }
+
+  &-header {
+    display: flex;
+    margin-top: 43px;
+    width: 635px;
+    height: 26px;
+    align-items: center;
+    position: relative;
+
+    .title {
+      width: 50%;
+
+      strong {
+        font-size: 14px;
+        padding-left: 12px;
+      }
+    }
+
+    .total {
+      width: 50%;
+      font-size: 14px;
+    }
+
+    .btn {
+      @extend .center-middle;
+      position: absolute;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      width: 26px;
+      height: 26px;
+      color: rgba($white, 0.5);
+      background: rgba($darken, 0.8);
+      border-radius: 100%;
+
+      &:hover {
+        color: rgba($white, 0.75);
+      }
+    }
+  }
+
+  &-body {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 54px;
+
+    .controls {
+      position: absolute;
+      top: 50%;
+      left: 60px;
+      right: 60px;
+      margin-top: -12px;
+
+      .btn {
+        float: left;
+        font-size: 24px;
+        color: rgba(black, 0.7);
+        width: 100px;
+        height: 100px;
+        @extend .center-middle;
+
+        &:hover {
+          color: rgba(white, 0.5);
+        }
+
+        &-next {
+          float: right;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    margin-top: 23px;
+    margin-bottom: 50px;
+
+    .btn {
+      @extend .shadow-green;
+      @extend .center-middle;
+      border-radius: 100%;
+      width: 56px;
+      height: 56px;
+      font-size: 24px;
+    }
+
+    .btn-voting {
+      color: $red;
+      background: $white;
+    }
+
+    .btn-voted {
+      color: $white;
+      background: $red;
+    }
+  }
+}

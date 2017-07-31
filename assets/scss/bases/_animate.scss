@@ -1,0 +1,11 @@
+.transition {
+  @include vendor(transition, ease-out 0.2s);
+}
+
+.transition-5 {
+  @include vendor(transition, ease-out 0.4s);
+}
+
+.btn {
+  @extend .transition;
+}

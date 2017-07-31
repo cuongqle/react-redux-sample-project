@@ -1,0 +1,76 @@
+.btn {
+  @extend .btn;
+  border-radius: 2px;
+}
+
+.btn-trans {
+  background: transparent !important;
+}
+
+.btn-white {
+  @include button-variant($btn-default-color, $white, $white);
+
+  &.btn-trans {
+    color: white;
+  }
+}
+
+.btn-request {
+  @extend .btn;
+  height: 54px;
+  width: 225px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  font-size: 10px;
+  @include vendor(border-radius, 54px);
+
+  &.btn-request-vote {
+    background-color: $pink;
+    box-shadow: 0px 3px 0px $turquoise;
+    i {
+      color: white;
+    }
+  }
+  > div:first-child {
+    width: 55px;
+    text-align: center;
+  }
+
+  > div:last-child {
+    @extend .center-middle;
+    width: 140px;
+
+    strong {
+      letter-spacing: 1.72px;
+    }
+
+    [class*="agr-"] {
+      margin-right: 10px;
+      font-size: 14px;
+    }
+  }
+
+  .grey {
+    color: rgba(white, 0.5);
+  }
+
+  .divine {
+    height: 40px;
+    border: 1px solid rgba(white, 0.2);
+  }
+
+  strong {
+    color: $white-1;
+  }
+
+  &-submit {
+    @extend .shadow-pink;
+    @include button-variant($white, #2333d1, #2333d1);
+  }
+
+  &-voted {
+    @extend .shadow-green;
+    @include button-variant($white, #ff6578, #ff6578);
+  }
+}

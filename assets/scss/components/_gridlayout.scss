@@ -1,0 +1,92 @@
+.grid-full {
+  width: #{$col-width * 5}px !important;
+  @include respondTo(tabletLandscape) {
+    width: #{278 * 3}px !important;
+  }
+
+  @include respondTo(tabletPortrait) {
+    width: #{246 * 2}px !important;
+  }
+
+  @include respondTo(mobile) {
+    width: #{$col-width * 1}px !important;
+  }
+  .grid-wrapper {
+    @extend .grid-container;
+  }
+}
+
+.grid-container {
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+
+  width: #{$col-width * 5}px;
+
+  @include respondTo(tabletPortrait) {
+    width: #{246 * 3}px;
+  }
+
+  @include respondTo(tabletLandscape) {
+    width: #{$col-width * 3}px;
+  }
+
+  @include respondTo(mobile) {
+    width: #{$col-width * 1}px;
+  }
+}
+
+.grid-wrapper {
+  overflow: hidden;
+  width: #{$col-width * 4}px;
+  @include respondTo(tabletLandscape) {
+    width: #{$col-width * 2}px;
+  }
+
+  @include respondTo(tabletPortrait) {
+    width: #{246 * 2}px;
+  }
+
+  @include respondTo(mobile) {
+    width: #{$col-width * 1}px;
+  }
+
+  .ghost-buster {
+    height: 56px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: relative !important;
+  }
+  &:after {
+    content: "";
+    padding-bottom: 56px;
+  }
+}
+
+.section-recent {
+  &-title {
+    color: $darkgrey;
+    padding: 35px 0 #{$title-header-padding-bottom}px 14px;
+  }
+  &.single {
+    max-width: 670px;
+    margin: 0 auto;
+
+    @include respondTo(mobile) {
+      max-width: 320px;
+    }
+
+    .grid-wrapper {
+      width: 100% !important;
+
+      .grid-item {
+        width: 100% !important;
+      }
+    }
+  }
+}
+

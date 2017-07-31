@@ -1,0 +1,26 @@
+@media (max-width: 1024px) {
+  #picture-details {
+    .main-container {
+      .image-block {
+        .agr-previous {
+          left: 36px !important;
+        }
+        .agr-next {
+          right: 36px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 925px) {
+  #picture-details {
+    .main-container {
+      .image-block {
+        i {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

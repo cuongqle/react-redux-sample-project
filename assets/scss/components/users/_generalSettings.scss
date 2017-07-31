@@ -1,0 +1,181 @@
+.user-settings {
+  .setup {
+    margin-bottom: 28px;
+    border-bottom: 1px solid $grey;
+
+    .header {
+      @extend .bold-300;
+      color: $grey-5;
+      font-size: 12px;
+      letter-spacing: 0.75px;
+      line-height: 16px;
+      margin-bottom: 16px;
+    }
+
+    .settings-container {
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+
+      &.setting-row {
+        flex-direction: row;
+      }
+
+      .social-logo {
+        @extend .center-middle;
+        @extend .pointer;
+        @extend .transition;
+        @include round-background-image(null, 44px, null, $white);
+        border: 2px solid $dark;
+        margin-right: 19px;
+
+        /* some magic for fun, if not fun, i don't care */
+        &:hover, &.connected {
+          border: 2px solid $white;
+
+          &.facebook {
+            @include round-background-image(null, 44px, null, #3a5999);
+          }
+
+          &.google-plus {
+            @include round-background-image(null, 44px, null, #de4b39);
+          }
+
+          &.linked-in {
+            @include round-background-image(null, 44px, null, #007fb1);
+          }
+
+          &.twitter {
+            @include round-background-image(null, 44px, null, #00acee);
+          }
+
+          &.instagram {
+            @include round-background-image(null, 44px, null, $primary-color);
+          }
+
+          i {
+            color: $white;
+          }
+        }
+
+        i {
+          font-size: 22px;
+          color: $black;
+        }
+      }
+
+      .box {
+        flex-shrink: 0;
+        width: 48.5%;
+
+        .title {
+          @extend .bold-300;
+          color: $grey-5;
+          font-size: 10px;
+          letter-spacing: 0.63px;
+          line-height: 14px;
+          margin-bottom: 11px;
+        }
+
+        .select-setting {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+
+        .agr-global, .agr-rules, .agr-lock {
+          margin-left: 8px;
+        }
+
+        .agora-select {
+          font-size: 10px;
+        }
+
+        i {
+          color: $grey-5;
+          margin-right: 5px;
+        }
+
+        &.edit-email {
+          margin-bottom: 20px;
+        }
+
+        &.edit-email, &.edit-password {
+          width: auto;
+        }
+
+        input {
+          border: none;
+          outline: none;
+          background-color: $white-1;
+          width: 240px;
+          border-bottom: 1px solid $grey-5;
+        }
+
+        .btn-edit {
+          @extend .bold-300;
+          @extend .pointer;
+          @extend .no-select;
+          margin-left: 20px;
+          color: $primary-color;
+          font-size: 10px;
+          line-height: 14px;
+        }
+      }
+    }
+
+    .agora-checkbox-text {
+      @extend .bold-300;
+      color: $dark;
+      font-size: 12px;
+      letter-spacing: 0.2px;
+      line-height: 16px;
+    }
+  }
+
+  &-actions {
+    display: flex;
+
+    &-right {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .btn-actions {
+      @extend .bold-300;
+      @extend .pointer;
+      @extend .no-select;
+      @extend .transition;
+      width: 166px;
+      height: 100%;
+      font-size: 10px;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    .btn-delete {
+      flex-shrink: 0;
+      border: 1px solid $danger-color;
+      color: $danger-color;
+
+      i {
+        font-size: 13px;
+        margin-right: 13px;
+      }
+    }
+
+    .btn-cancel {
+      color: $primary-color;
+
+      &.disabled {
+        cursor: not-allowed;
+      }
+    }
+
+    .btn-save {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+}

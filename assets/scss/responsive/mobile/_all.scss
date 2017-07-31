@@ -1,0 +1,11 @@
+@media (max-width: ($tablet-portrait-resolution - 1)) {
+  @import "header";
+  @import "home";
+  @import "userList";
+  @import "auth";
+  @import "profile";
+  @import "profileSettings";
+  @import "history";
+  @import "popupNominate";
+  @import "payout";
+}

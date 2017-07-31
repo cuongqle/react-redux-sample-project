@@ -1,0 +1,77 @@
+.section-history {
+  width: 100%;
+  justify-content: center;
+  margin-top: 40px;
+
+  .history-title {
+    width: 810px;
+    margin: 0 auto 40px;
+    @extend .bold-700;
+    font-size: 20px;
+    color: $dark;
+
+    .sub {
+      @extend .bold-300;
+      margin-top: 9px;
+      color: $grey-2;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 16px;
+    }
+  }
+
+  .history-items {
+    .history-menu {
+      color: $dark;
+      margin-bottom: 66px;
+      .main-content {
+        border-bottom: 1px solid $grey-1;
+        .menu {
+          width: 810px;
+          margin: 0 auto;
+          .menu-item {
+            cursor: pointer;
+            display: inline-block;
+            width: 50%;
+            text-align: center;
+            border-bottom: 4px solid $grey-1;
+            &.active {
+              color: $primary-color;
+              border-bottom: 4px solid $primary-color;
+              &.left {
+                border-right: 1px solid $primary-color;
+              }
+
+              &.right {
+                border-left: 1px solid $primary-color;
+              }
+              span {
+                color: $primary-color;
+              }
+            }
+            i {
+              display: block;
+              font-size: 15px;
+              margin-bottom: 9px;
+            }
+            span {
+              display: block;
+              color: $dark;
+              font-size: 10px;
+              font-weight: 600;
+              line-height: 10px;
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+    .wrapper {
+      width: 810px;
+      margin: 0 auto;
+    }
+  }
+
+  $summary-box-height: 310px;
+  $summary-checkout-height: 40px;
+}

@@ -1,0 +1,431 @@
+.agr-input {
+  position: relative;
+  margin-bottom: 20px;
+  .input-details {
+    position: relative;
+    .notification {
+      .label {
+        color: #b1b1b1;
+        font-size: 10px;
+        font-weight: 300;
+        letter-spacing: 0.63px;
+        line-height: 14px;
+        padding-right: 10px;
+      }
+      .error {
+        color: #ff6578;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 16px;
+      }
+    }
+    .logo {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: black;
+      border-radius: 50%;
+      bottom: 10px;
+      right: 5px;
+      cursor: pointer;
+      i {
+        font-size: 10px;
+      }
+      &.logo-checked {
+        display: none;
+      }
+      .agr-delete {
+        font-size: 8px;
+      }
+    }
+  }
+}
+
+.grey-background {
+  position: relative;
+
+  &:after {
+    content: '';
+    @include flex-box(0, 0, 0, 0);
+    background-color: rgba(37, 37, 37, 0.45);
+  }
+}
+
+.img-fit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.agora-select {
+  position: relative;
+
+  &-button {
+    @extend .center-middle;
+    position: relative;
+    z-index: 1;
+    border: 0;
+    outline: none;
+    background-color: rgba(0,0,0,0);
+    width: 100%;
+
+    i {
+      flex-shrink: 0;
+      margin-left: 10px;
+      color: $dark;
+      font-size: 8px;
+    }
+  }
+
+  .expand>&-dropdown {
+    display: block;
+  }
+
+  &-dropdown {
+    @extend .no-select;
+    display: none;
+    z-index: 2000;
+    position: absolute;
+    top: 100%;
+    min-width: 100%;
+    background-color: $white;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    max-height: 250px;
+    overflow-y: auto;
+
+    /* Let's get this party started */
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      background: rgba(0,54,255,0.8);
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    }
+    &::-webkit-scrollbar-thumb:window-inactive {
+      background: rgba(0,54,255,0.4);
+    }
+
+    .filter-option {
+      display: inline-block;
+      overflow: hidden;
+      width: 100%;
+      text-align: left;
+    }
+
+    &-menu {
+      @extend .pointer;
+      list-style: none;
+      border: 0;
+      padding: 0;
+      margin: 0;
+      box-shadow: none;
+
+      &-item {
+        text-align: left;
+        padding: 3px 15px 3px 5px;
+        clear: both;
+        font-weight: 400;
+        line-height: 1.42857143;
+        white-space: nowrap;
+        color: $dark;
+
+        &:hover, &.selected {
+          background-color: $lightgrey;
+        }
+
+        &.not-found {
+          font-style: italic;
+        }
+
+        &.lookup {
+          @extend .center-middle;
+          padding-right: 0;
+
+          &:hover, &.selected {
+            background-color: $white;
+          }
+
+          .lookup-input {
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            width: 100%;
+            margin-left: 5px
+          }
+
+          i {
+            flex-shrink: 0;
+          }
+        }
+      }
+    }
+  }
+
+  >select {
+    position: absolute!important;
+    bottom: 0;
+    left: 50%;
+    display: block!important;
+    width: .5px!important;
+    height: 100%!important;
+    padding: 0!important;
+    opacity: 0!important;
+    border: none
+  }
+}
+
+.agora-checkbox {
+  @extend .no-select;
+  .checkbox {
+    display: inline-block;
+    width: auto;
+
+    label {
+      padding: 0;
+    }
+  }
+
+  input[type="checkbox"].checkbox {
+    visibility: hidden;
+    margin: 0;
+    width: 13px;
+    height: 13px;
+
+    & + span {
+      @extend .bold-500;
+      color: $grey-2;
+      font-size: 10px;
+      line-height: 14px;
+      display: inline-block;
+    }
+
+    & + span:before {
+      content: '';
+      display: inline-block;
+      height: 13px;
+      width: 13px;
+      margin-right: 6px;
+      vertical-align: middle;
+      border: 1px solid $grey-1;
+      border-radius: 2px;
+      background-color: $white;
+    }
+
+    &:checked + span:before {
+      content: "\E90E";
+      font-family: 'agora';
+      font-size: 13px;
+      display: inline-block;
+      height: 13px;
+      width: 13px;
+      margin-right: 6px;
+      vertical-align: middle;
+      border: none;
+      border-radius: 0;
+      color: $primary-color;
+      background-color: rgba(0,0,0,0);
+    }
+  }
+}
+
+.agora-table {
+  @extend .bold-700;
+  font-size: 10px;
+  color: $grey-2;
+
+  &.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: $lightgrey;
+    td:first-child {
+      background-color: $grey;
+    }
+  }
+
+  &.table-striped > tbody > tr:nth-of-type(even) {
+    td:first-child {
+      background-color: $lightgrey;
+    }
+  }
+
+  > thead > tr > th {
+    @extend .pointer;
+    border-bottom: 0;
+    height: 50px;
+    vertical-align: middle !important;
+
+    span > i {
+      margin-left: 3px;
+      font-size: 8px;
+    }
+
+    &.middle {
+      text-align: center;
+    }
+
+    i {
+      font-size: 12px;
+    }
+
+    &:hover {
+      background-color: $lightgrey;
+    }
+
+    &.active {
+      background-color: $white !important;
+      color: $primary-color;
+    }
+  }
+
+  > tbody > tr > td {
+    border-top: 0;
+    height: 50px;
+    vertical-align: middle;
+    border: 2px solid $white;
+
+    &.middle {
+      text-align: center;
+    }
+
+    i {
+      margin: 12px;
+    }
+  }
+}
+
+.agora-modal {
+  display: none;
+  /* popup z-index tu quy 9 mang lai may man, but should be: https://www.iab.com/guidelines/z-index-guidelines/ */
+  z-index: 9999;
+  @extend .transition;
+
+  &.center-middle {
+    @extend .center-middle;
+  }
+
+  &.top-middle {
+    @extend .center-middle;
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  &.active {
+    /* everything should be under this class 'active' */
+    display: flex;
+
+    &.blur-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(37, 37, 37, 0.93);
+      z-index: 100000;
+    }
+    &.trans-background {
+      background-color: rgba(0, 0, 0, 0) !important;
+    }
+  }
+}
+
+.broken-loading {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  -webkit-animation: sk-rotateplane 1.5s infinite ease-in-out;
+  animation: sk-rotateplane 1.5s infinite ease-in-out;
+
+  //display: block;
+  //position: relative;
+  //width: 40px;
+  //height: 40px;
+  //margin: -20px 0 0 -20px;
+  //border-radius: 50%;
+  //border: 3px solid transparent;
+  //border-top-color: $primary-color;
+  //-webkit-animation: spin 2.5s linear infinite;
+  //animation: spin 2.5s linear infinite;
+  //&:before {
+  //  content: "";
+  //  position: absolute;
+  //  top: 3px;
+  //  left: 3px;
+  //  right: 3px;
+  //  bottom: 3px;
+  //  border-radius: 50%;
+  //  border: 3px solid transparent;
+  //  border-top-color: $danger-color;
+  //  -webkit-animation: spin 2.5s linear infinite;
+  //  animation: spin 2.5s linear infinite;
+  //}
+  //&:after {
+  //  content: "";
+  //  position: absolute;
+  //  top: 8px;
+  //  left: 8px;
+  //  right: 8px;
+  //  bottom: 8px;
+  //  border-radius: 50%;
+  //  border: 3px solid transparent;
+  //  border-top-color: $warning-color;
+  //  -webkit-animation: spin 2s linear infinite;
+  //  animation: spin 2s linear infinite;
+  //}
+}
+/* credit: https://ihatetomatoes.net/create-css3-spinning-preloader/ */
+/* include this only once */
+@-webkit-keyframes spin {
+  0%   {
+    -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);  /* IE 9 */
+    transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg);  /* IE 9 */
+    transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+}
+@keyframes spin {
+  0%   {
+    -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);  /* IE 9 */
+    transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg);  /* IE 9 */
+    transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+/* credit: http://tobiasahlin.com/spinkit/ */
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    } 100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      }
+}

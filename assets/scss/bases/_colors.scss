@@ -1,0 +1,81 @@
+$lightgrey: #f6f6f6;
+$grey: #eaeaea;
+$grey-1: #d8d8d8;
+$grey-2: #7e7e7e;
+$grey-3: #979797;
+$grey-4: #cecfcb;
+$grey-5: #b1b1b1;
+$grey-6: #f0f0f0;
+$grey-7: #b0b0b0;
+$grey-8: #818181;
+$darkgrey: #828282;
+$black: #505050;
+$dark: #3a3a3a;
+$darken: #252525;
+$blue: #0036ff;
+$red: #ff6578;
+$green: #50e3c2;
+$green-1: #4cc2a7;
+$yellow: #f5a623;
+$turquoise: #50e3c2; // ngoc lam
+$white: #fff;
+$white-1: #fafafa;
+$pink: #ff6578;
+$brown: #863a39;
+$cover-color: rgba(37, 37, 37, 0.7);
+
+$primary-color: $blue;
+$info-color: $turquoise;
+$success-color: $green;
+$warning-color: $yellow;
+$danger-color: $red;
+
+//background
+$bg-header: $lightgrey;
+$bg-search: $grey;
+
+//buttons
+$btn-dark-bg: $dark;
+$btn-blue-bg: $blue;
+
+//border
+$border-grey: $grey-1;
+$border-normal: $grey;
+$border-dark: $dark;
+
+//text
+$text-dark: $dark;
+$text-lightgrey: $grey-1;
+
+//colors
+.color-lightgrey {
+  color: $lightgrey;
+}
+
+.color-grey {
+  color: $grey;
+}
+
+.color-darkgrey {
+  color: $darkgrey;
+}
+
+.color-dark {
+  color: $dark;
+}
+
+.color-blue {
+  color: $blue;
+}
+
+.color-red {
+  color: $red;
+}
+
+.color-green {
+  color: $green;
+}
+
+.color-yellow {
+  color: $yellow;
+}

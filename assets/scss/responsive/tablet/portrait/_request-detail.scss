@@ -1,0 +1,13 @@
+#request-detail {
+  min-width: $tablet-portrait-resolution;
+
+  .tabs {
+    &-inner {
+      width: 100%;
+    }
+
+    &-item {
+      width: calc(100% / 3);
+    }
+  }
+}

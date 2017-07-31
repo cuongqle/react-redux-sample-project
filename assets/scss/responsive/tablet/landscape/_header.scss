@@ -1,0 +1,25 @@
+#header {
+  min-width: $tablet-landscape-resolution;
+
+  .logo-home {
+    width: 110px;
+  }
+
+  .button-upload {
+    padding: 0 15px;
+
+    .btn-black {
+      padding-right: 15px;
+    }
+  }
+
+  .menu {
+    &-item {
+      width: 52px;
+    }
+  }
+
+  .wallet {
+    padding: 0 19px;
+  }
+}

@@ -1,0 +1,211 @@
+.section-search {
+
+  .search-nav {
+
+    .header, .filters-by {
+      @extend .bold-300;
+      font-size: 10px;
+      color: $grey-5;
+      letter-spacing: 0.63px;
+    }
+
+    .nav-filter {
+      @extend .vertical-middle;
+      padding: 20px 37px;
+
+      .filters {
+        @extend .center-middle;
+        padding: 0 20px;
+      }
+    }
+
+    .nav-search-by {
+      @extend .vertical-middle;
+      min-width: 1390px;
+
+      @include respondTo(tabletLandscape) {
+        min-width: 1024px;
+      }
+
+      @include respondTo(tabletPortrait) {
+        min-width: 768px;
+      }
+
+      @include respondTo(mobile) {
+        min-width: 320px;
+      }
+
+      height: 56px;
+      background-color: $grey;
+
+      .header {
+        margin-left: 91px;
+        margin-right: 12px;
+
+        @include respondTo(tabletLandscape tabletPortrait mobile) {
+          margin-left: 43px;
+        }
+      }
+
+      .menu {
+        @extend .center-middle;
+        margin-right: 24px;
+
+        .menu-item {
+          @extend .vertical-middle;
+          @extend .pointer;
+          @extend .no-select;
+          &.active {
+            color: $primary-color !important;
+            box-shadow: inset 0 -4px 0 $primary-color !important;
+          }
+          &:hover {
+            color: $dark;
+            box-shadow: inset 0 -4px 0 $dark;
+          }
+
+          width: 241px;
+          height: 56px;
+          box-shadow: inset 0 -4px 0 $grey-1;
+          flex-direction: column;
+          text-align: center;
+          color: $dark;
+          padding: 14px;
+
+          i {
+            font-size: 10px;
+          }
+
+          span {
+            @extend .bold-300;
+            font-size: 8px;
+            margin-top: 3px;
+          }
+        }
+      }
+
+      .filters {
+        @extend .vertical-middle;
+        //width: 148px;
+        height: 56px;
+        margin-left: 34px;
+
+        &-dropdown {
+          @extend .bold-300;
+          font-size: 10px;
+          color: $dark;
+          background-color: $grey;
+          border: 0;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .section-results {
+    display: flex;
+    margin: 0 auto;
+    padding: 14px 23px;
+    /*width: 1390px;*/
+
+    @include respondTo(tabletLandscape) {
+      width: 1024px;
+    }
+
+    @include respondTo(tabletPortrait) {
+      width: 768px;
+    }
+
+    @include respondTo(mobile) {
+      width: 320px;
+      flex-direction: column;
+    }
+  }
+
+  .section-tags {
+    @extend .center-middle;
+    margin-left: 14px;
+    height: 19px;
+    color: $primary-color;
+
+    .tags {
+      @extend .bold-300;
+      font-size: 14px;
+    }
+
+    .follow-tag {
+      @extend .bold-500;
+      @extend .pointer;
+      margin-left: 18px;
+      font-size: 12px;
+      letter-spacing: 0.15px;
+    }
+  }
+
+
+  .section-title {
+    margin-left: 19px;
+  }
+
+  /* override item-promotion-header css*/
+  .item-promotion-header {
+    margin-left: 4px;
+  }
+
+  .section-title-header, .item-promotion-header {
+    @extend .bold-300;
+    font-size: 10px;
+    color: $grey-5;
+    .more {
+      margin-left: 5px;
+      color: $primary-color;
+    }
+  }
+
+  /* extra css for external components */
+  .wrapper {
+    @extend .center-middle;
+    width: 100%;
+
+    @include respondTo(mobile) {
+      flex-direction: column;
+    }
+
+    .request-details {
+      margin-left: 14px;
+      margin-right: 14px;
+      max-width: 250px;
+    }
+
+    .row {
+      margin-left: 14px;
+      margin-right: 0;
+      width: 250px;
+      overflow: hidden;
+    }
+
+    .user-item {
+      width: 250px;
+      min-width: 250px;
+      height: 125px;
+      max-height: 125px;
+      overflow: hidden;
+      padding: 30px 15px;
+      & + .user-item {
+        border-top: 0 !important;
+      }
+      .btn-follow {
+        top: 30px;
+        right: 0;
+      }
+    }
+  }
+
+  .img-result {
+    @extend .pointer;
+    background-color: rgba(0, 0, 0, 0.48);
+    width: 250px; //demo
+    height: 200px; //demo
+    margin: 0 14px 14px 14px;
+  }
+}

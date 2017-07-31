@@ -1,0 +1,133 @@
+#payout {
+  .connect-with-stripe {
+    .main-frame {
+      background-color: $grey;
+      min-height: 118px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      .label {
+        display: inline-block;
+        color: $dark;
+        width: 70%;
+        font-size: 12px;
+        text-align: left;
+        padding-left: 30px;
+        padding-right: 15px;
+        &.full {
+          width: 100%;
+          padding: 0;
+          .bold {
+            padding: 0 30px;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            i {
+              font-size: 14px;
+              margin-right: 10px;
+            }
+            .color-dark {
+              margin-right: 10px;
+            }
+          }
+
+          hr {
+            border-bottom: 1.5px solid $white;
+            margin: 0px;
+          }
+          .block-second {
+            min-height: 70px;
+            padding: 17px 30px;
+            .normal {
+              margin-bottom: 10px;
+              .grey {
+                color: $grey-2;
+                margin-right: 10px;
+              }
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+        }
+        .bold {
+          font-weight: 700;
+          line-height: 16px;
+          margin-bottom: 5px;
+        }
+        .normal {
+          font-weight: 300;
+        }
+      }
+      .btn {
+        display: inline-block;
+        margin-right: 30px;
+        background-color: $primary-color;
+        color: white;
+        i {
+          font-size: 12px;
+          margin-right: 8px;
+        }
+        span {
+          font-size: 10px;
+        }
+      }
+    }
+    .bold-description {
+      padding-left: 10px;
+      color: $dark;
+      font-size: 12px;
+      margin-bottom: 30px;
+      .header {
+
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 11px;
+      }
+      span {
+        font-size: 11px;
+        font-weight: 600;
+      }
+    }
+    .blur-description {
+      font-size: 12px;
+      padding-left: 10px;
+      color: $grey-2;
+      .head-title {
+        margin-bottom: 10px;
+        a {
+          color: $primary-color;
+          font-weight: 600;
+        }
+      }
+    }
+    .priville {
+      margin-bottom: 30px;
+      .bold {
+        font-weight: 600;
+        padding-left: 10px;
+        margin-bottom: 10px;
+      }
+      .lst-priville {
+        ul {
+          padding-left: 20px;
+          li {
+            list-style: none;
+            margin-bottom: 7px;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 16px;
+            color: $dark;
+            i {
+              margin-right: 10px;
+              font-size: 14px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

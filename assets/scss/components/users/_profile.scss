@@ -1,0 +1,341 @@
+#profile {
+  min-width: $min-desktop-resolution;
+  #profile-banner {
+    min-width: $min-desktop-resolution;
+    background: url('../img/background-profile.png') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 70px;
+    position: relative;
+    z-index: 2;
+    .background {
+
+    }
+    .cover {
+      @include flex-box(0, 0, 0, 0);
+      background-color: rgba(37, 37, 37, 0.45);
+      z-index: -1;
+    }
+
+    .btn-edit {
+      @extend .center-middle;
+      height: 40px;
+      color: $white;
+      position: absolute;
+      top: 22px;
+      right: 27px;
+      padding: 6px 17px;
+
+      i {
+        color: $white-1;
+        font-size: 16px;
+        margin-right: 16px;
+      }
+
+      span {
+        letter-spacing: 1.15px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-right: 7px;
+      }
+
+    }
+
+    .profile-banner-container {
+      z-index: 1;
+      width: 732px;
+      margin: 0 auto;
+      color: white;
+      padding-bottom: 31px;
+      position: relative;
+
+      .main-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 28px;
+        .avatar {
+          width: 99px;
+          height: 99px;
+          background-color: $darkgrey;
+          border-radius: 50%;
+          display: inline-block;
+          margin-right: 30px;
+          border: 3px solid $grey-3;
+          overflow: hidden;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .info-description {
+          display: inline-block;
+          .name-info {
+            .name {
+              font-size: 18px;
+              font-weight: 700;
+              letter-spacing: -0.04px;
+              line-height: 29px;
+              margin-right: 13px;
+            }
+            .follow {
+              color: $white-1;
+              font-size: 12px;
+              font-weight: 500;
+              letter-spacing: 0.15px;
+              line-height: 19px;
+            }
+          }
+          .alias {
+            height: 19px;
+            color: $grey-1;
+            font-family: Poppins;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15px;
+            line-height: 19px;
+          }
+          .rating {
+            .progress {
+              margin-top: 5px;
+              width: 235px;
+              height: 32px;
+              background: none;
+              box-shadow: none;
+              position: relative;
+              border-radius: 0;
+              margin-bottom: 0;
+              &:after {
+                content: "";
+                background: grey;
+                height: 5px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 5px;
+              }
+              .progress-bar {
+                box-shadow: none;
+                background-color: $white;
+                height: 5px;
+                position: absolute;
+                z-index: 1;
+                bottom: 0;
+                border-radius: 5px;
+                .title-rating {
+                  position: absolute;
+                  bottom: 10px;
+                  right: 0;
+                  height: 23px;
+                  color: white;
+                  font-size: 14px;
+                  font-weight: 700;
+                  letter-spacing: -0.09px;
+                  line-height: 23px;
+
+                }
+              }
+            }
+            .title-progress {
+              width: 235px;
+              span {
+                height: 19px;
+                color: white;
+                font-size: 12px;
+                font-weight: 400;
+                letter-spacing: -0.07px;
+                line-height: 19px;
+              }
+              .advance {
+                float: left;
+              }
+              .pro {
+                float: right;
+              }
+            }
+          }
+        }
+      }
+      .follow-info {
+        line-height: 16px;
+        margin-bottom: 12px;
+        color: $grey-4;
+        .title {
+          font-size: 10px;
+          font-weight: 400;
+          letter-spacing: -0.06px;
+          line-height: 14px;
+          display: inline-block;
+        }
+        .list-follower {
+          display: inline-block;
+          text-decoration: none;
+          padding-left: 10px;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: -0.07px;
+          line-height: 14px;
+          margin: 0;
+          li {
+            display: inline-block;
+            padding-right: 5px;
+          }
+        }
+        .follower-remaining {
+          display: inline-block;
+          font-size: 12px;
+        }
+      }
+      .description-info {
+        font-family: Charter;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 14px;
+      }
+      .main-title {
+        color: $grey-1;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 16px;
+        margin-bottom: 14px;
+      }
+      .social {
+        .circle {
+          cursor: pointer;
+          width: 38px;
+          height: 38px;
+          border-radius: 50%;
+          background-color: black;
+          &:hover {
+            background-color: $white;
+            i {
+              color: rgba(37, 37, 37, 0.95) !important;
+            }
+          }
+          i{
+            font-size: 15px;
+          }
+        }
+        .number {
+          opacity: 0.75;
+          color: #eaeaea;
+          font-size: 12px;
+          font-weight: 300;
+          position: absolute;
+          bottom: -4px;
+          left: 40px;
+        }
+        .facebook, .twitter {
+          display: inline-block;
+          position: relative;
+          padding-right: 40px;
+        }
+      }
+    }
+  }
+  .profile-feature-menu {
+    min-width: $min-desktop-resolution;
+
+    .menu-container {
+      position: relative;
+      width: 732px;
+      margin: 0 auto;
+      .feature-menu {
+        width: 25%;
+        display: inline-block;
+        cursor: pointer;
+        &:first-child {
+          border-left: 0;
+        }
+
+        &:last-child {
+          border-right: 0;
+          width: calc(25% + 3px);
+        }
+
+        &.active {
+          border-color: $blue;
+          z-index: 1;
+          position: relative;
+          i {
+            color: $blue;
+          }
+          .main-title {
+            color: $blue;
+          }
+          .number {
+            color: $black;
+            font-weight: 600;
+          }
+          .big-number {
+            color: $blue;
+          }
+        }
+
+        text-align: center;
+        border-bottom: 3px solid $grey-1;
+        border-right: 1px solid $grey-1;
+        border-left: 1px solid $grey-1;
+        color: $dark;
+        margin-left: -1px;
+
+        i {
+          padding-top: 22px;
+          display: block;
+          margin-bottom: 6px;
+          color: $grey-3;
+          font-size: 15px;
+        }
+        .main-title {
+          color: $dark;
+          font-size: 10px;
+          font-weight: 600;
+          line-height: 14px;
+          padding-right: 5px;
+        }
+        .number {
+          color: $grey-5;
+          font-size: 10px;
+          font-weight: 300;
+          line-height: 14px;
+        }
+        .big-number {
+          color: $grey-3;
+          padding-top: 22px;
+          display: block;
+          font-size: 18px;
+          font-weight: 200;
+          letter-spacing: 0.23px;
+          line-height: 21px;
+        }
+      }
+    }
+
+    hr {
+      margin: 0;
+      border-top: 1px solid $grey-1;
+    }
+  }
+  .grid-container {
+    margin: 0 auto;
+    display: flex;
+    width: #{$col-width * 5}px;
+
+    @include respondTo(tabletLandscape) {
+      width: #{$col-width * 3}px !important;
+    }
+
+    @include respondTo(tabletPortrait) {
+      width: #{246 * 2}px;
+    }
+
+    @include respondTo(mobile) {
+      width: #{$col-width * 1}px;
+    }
+  }
+  .section-main-content {
+    width: 100%;
+    display: inline-block;
+  }
+}

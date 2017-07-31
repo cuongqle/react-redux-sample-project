@@ -1,0 +1,71 @@
+.section-faqs {
+  margin-left: 30px;
+  .container {
+    @extend .bold-500;
+    width: $tablet-landscape-resolution;
+    max-width: $tablet-landscape-resolution;
+    margin: 0 auto;
+    padding-bottom: 40px;
+
+    ._anchor {
+      @extend .pointer;
+      color: $primary-color;
+      text-decoration: underline;
+      display: inline-block;
+    }
+
+    ._undeline {
+      text-decoration: underline;
+      display: inline-block;
+    }
+
+    .welcome {
+      display: inline-block;
+    }
+
+    .title, .heading {
+      @extend .bold-700;
+      font-size: 16px;
+      display: block;
+      padding-bottom: 15px;
+      padding-top: 20px;
+    }
+
+    .heading {
+      font-size: 22px;
+    }
+
+    .sub-heading {
+      color: $grey-7;
+    }
+
+    .sub-title {
+      color: $grey-8;
+    }
+
+    .content {
+      color: $grey-7;
+    }
+
+    .dot {
+      list-style:disc outside none;
+      display:list-item;
+      margin-left: 15px;
+    }
+
+    &--split {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    &--left, &--right {
+      width: 45%;
+    }
+
+    &--left {
+      padding-right: 60px;
+    }
+
+  }
+}

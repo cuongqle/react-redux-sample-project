@@ -1,0 +1,23 @@
+#user-list {
+  width: 100% !important;
+  padding: 0 20px !important;
+}
+@media (max-width: 375px) {
+  #user-list, .wrapper{
+    .row{
+      display: block;
+      .avatar{
+        width: 45px;
+        display: block !important;
+      }
+      .description{
+        display: block !important;
+      }
+      .btn-follow{
+        position: static;
+        display: block !important;
+      }
+    }
+
+  }
+}

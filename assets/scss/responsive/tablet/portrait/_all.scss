@@ -1,0 +1,9 @@
+@media (min-width: $tablet-portrait-resolution) and (max-width: ($tablet-landscape-resolution - 1)) {
+  @import "header";
+  @import "home";
+  @import "pictureDetails";
+  @import "profile";
+  @import "userList";
+  @import "request-detail";
+  @import "history";
+}

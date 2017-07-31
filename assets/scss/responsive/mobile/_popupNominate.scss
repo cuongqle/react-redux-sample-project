@@ -1,0 +1,12 @@
+@media (max-width: 660px) {
+  .nominated-detail {
+    &-header {
+      width: 100% !important;
+      padding: 0 15px;
+      .btn-close{
+        right: 15px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,57 @@
+#header {
+  min-width: $tablet-portrait-resolution;
+
+  .logo-home {
+    width: 43px;
+    background-image: url('../img/logo-mobile.png');
+
+    &:hover {
+      background-image: url('../img/logo-mobile-active.png');
+    }
+  }
+
+  .search-box {
+    .search-btn {
+      padding-left: 11px;
+    }
+  }
+
+  .button-upload {
+    padding: 0 19px;
+
+    .btn-black {
+      width: 46px;
+      padding: 0;
+
+      i {
+        margin: 0;
+      }
+
+      .text {
+        display: none;
+      }
+    }
+  }
+
+  .menu {
+    &-item {
+      width: 52px;
+    }
+  }
+
+  .wallet {
+    padding: 0 14px;
+
+    i {
+      margin-right: 6px;
+    }
+
+    .text {
+      display: none;
+    }
+  }
+
+  .profile {
+    width: 200px;
+  }
+}

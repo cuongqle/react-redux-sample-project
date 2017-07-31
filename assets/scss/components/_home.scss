@@ -1,0 +1,316 @@
+html, body {
+  @extend .font-poppins;
+  font-size: 12px;
+
+  &.overlay-enabled {
+    @extend .no-scrolling;
+  }
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  height: 64px;
+  background: $bg-search;
+
+  &-btn:focus, &-input:focus {
+    outline: none;
+  }
+
+  &-btn {
+    padding: 0 10px 0 20px;
+    font-size: 16px;
+    flex-shrink: 0;
+
+    &:hover i {
+      color: $text-dark;
+    }
+
+    i {
+      height: 14px;
+      display: block;
+    }
+  }
+
+  &-input {
+    background: $bg-search;
+    width: 100%;
+  }
+}
+
+.search-box {
+  display: flex;
+  height: 64px;
+  width: 100%;
+
+  .search {
+    cursor: text;
+  }
+
+  .tips {
+    @extend .bold-600;
+    font-size: 10px;
+    line-height: 63px;
+    color: $primary-color;
+    width: 102px;
+    text-align: right;
+    margin-right: 10px;
+    margin-left: auto;
+    display: none;
+  }
+
+  .tags-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 645px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    cursor: default;
+
+    @include respondTo(smallDesktop) {
+      max-width: 178px;
+    }
+
+    @include respondTo(mediumDesktop) {
+      max-width: 373px;
+    }
+
+    /* Let's get this party started */
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      background: rgba(0, 54, 255, 0.8);
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .tag-item {
+    @extend .center-middle;
+    height: 29px;
+    margin: 19px 0 16px 7px;
+    background-color: $dark;
+    color: $white-1;
+    border-radius: 2px;
+    padding: 0 8px;
+    white-space: nowrap;
+
+    .tag {
+      @extend .bold-300;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .remove {
+      @extend .pointer;
+      font-size: 8px;
+      margin-left: 11px;
+    }
+  }
+
+  &.active {
+    .search, .search-input {
+      background-color: $white;
+    }
+    .agr-search, input {
+      color: $primary-color;
+    }
+
+    .tips {
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .search-input {
+      width: 165px;
+      margin-right: 10px;
+
+      &::-webkit-input-placeholder {
+        color: transparent;
+      }
+      &:-moz-placeholder {
+        color: transparent;
+      }
+      /* FF 4-18 */
+      &::-moz-placeholder {
+        color: transparent;
+      }
+      /* FF 19+ */
+      &:-ms-input-placeholder {
+        color: transparent;
+      }
+      /* IE 10+ */
+    }
+  }
+}
+
+.banner-container {
+  min-width: $min-desktop-resolution;
+  position: relative;
+  // cannot copy image from avocode
+  background: url('../img/homepage-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(37, 37, 37, 0.6);
+  }
+
+  height: 292px;
+  .banner-content {
+    z-index: 2;
+    position: relative;
+    color: $white;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    .title {
+      font-size: 18px;
+      padding-bottom: 5px;
+    }
+    .sub-title{
+      font-size: 14px;
+    }
+
+    .search-container {
+      padding-top: 35px;
+      @include respondTo(tabletPortrait tabletLandscape mobile) {
+        padding-top: 15px !important;
+      }
+
+    }
+
+    .get-apps {
+      @extend .center-middle;
+      position: absolute;
+      top: 0;
+      right: 15px;
+      left: auto;
+      bottom: auto;
+      padding: 20px;
+      border: 1px solid rgba(20, 20, 20, 0.33);
+      border-radius: 2px;
+
+      @include respondTo(tabletPortrait tabletLandscape mobile) {
+        position: relative;
+        border: none;
+      }
+
+      .google-play {
+        @extend .pointer;
+        width: 133px;
+        height: 38px;
+        background: url('../img/google-play.png');
+        background-size: cover;
+        background-position: center center;
+        margin-right: 16px;
+      }
+      .app-store {
+        @extend .pointer;
+        width: 133px;
+        height: 38px;
+        background: url('../img/app-store.png');
+        background-size: cover;
+        background-position: center center;
+      }
+    }
+
+  }
+
+  .search-box {
+    &.active {
+      .search-input {
+        width: 650px!important;
+      }
+    }
+  }
+}
+
+.loading {
+  margin: auto;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  animation: spin 2s linear infinite;
+}
+
+#order-nav {
+  @extend .vertical-middle;
+  width: 100%;
+  height: 64px;
+  .order-menu {
+    @extend .center-middle;
+    @extend .pointer;
+    margin-left: auto;
+    width: 181px;
+    height: 100%;
+    &-item {
+      @extend .center-middle;
+      font-size: 16px;
+      width: 57px;
+      height: 100%;
+      border-bottom: 4px solid $grey-1;
+
+      &.item-refresh {
+        border-bottom-color: rgba(0,0,0,0) !important;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      &:hover {
+        color: $dark;
+        border-bottom-color: $dark;
+      }
+
+      &.active {
+        color: $primary-color;
+        border-bottom-color: $primary-color;
+      }
+    }
+  }
+}
+
+#main-body {
+  .section-main-content {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .section-aside-content {
+    width: #{$item-width}px;
+    margin-left: 14px;
+    margin-right: 14px;
+    flex-shrink: 0;
+
+    .title-request {
+      color: $darkgrey;
+      padding-top: 35px;
+      padding-bottom: #{$title-header-padding-bottom + $item-author-info-height}px;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+#user-list, .wrapper {
+  &.followers-list {
+    width: 729px;
+    margin: 0 auto;
+    .row {
+
+    }
+  }
+  .title {
+    text-transform: uppercase;
+    color: $grey-5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15px;
+    line-height: 16px;
+    margin-bottom: 23px;
+    span {
+      padding-left: 5px;
+      color: $primary-color;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 14px;
+    }
+  }
+  .user-item {
+    padding: 20px 0;
+    position: relative;
+    display: flex;
+
+    & + .user-item {
+      border-top: 1px solid $grey;
+    }
+
+    .avatar {
+      width: 45px;
+      height: 45px;
+      background: grey;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 20px;
+      flex-shrink: 0;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .description {
+      width: calc(100% - 65px);
+      .name {
+        width: 95px;
+        color: $primary-color;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: -0.03px;
+        line-height: 19px;
+      }
+      .alias {
+        color: $grey-2;
+        font-size: 11px;
+        font-weight: 300;
+        letter-spacing: 0.13px;
+        line-height: 16px;
+
+        span {
+          font-weight: 500;
+          color: $dark;
+        }
+      }
+      .title-follow {
+        color: $grey-2;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: -0.06px;
+        line-height: 14px;
+        margin-bottom: 3px;
+        display: flex;
+        align-items: center;
+        .list-followers {
+          padding: 0;
+          margin: 0;
+          padding-left: 3px;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: -0.06px;
+          line-height: 14px;
+          color: $grey-3;
+        }
+
+        .content-follow {
+          white-space: nowrap;
+        }
+      }
+
+    }
+    .btn-follow {
+      background-color: $white;
+      color: $primary-color;
+      position: absolute;
+      top: 20px;
+      right: 18px;
+    }
+  }
+
+}

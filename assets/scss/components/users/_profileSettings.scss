@@ -1,0 +1,264 @@
+#profile-settings {
+  .main-content {
+    width: 550px;
+  }
+}
+
+.setting-feature {
+  width: 711px;
+  margin: 0 auto;
+  margin-top: 32px;
+}
+
+.background-cover {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $white-1;
+  z-index: -1;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+  margin-bottom: 27px;
+}
+
+.settings-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.side-bar {
+  width: 200px;
+  .profile-settings-menu {
+    ul {
+      padding: 0;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 16px;
+      li {
+        list-style: none;
+        margin-bottom: 18px;
+        a {
+          color: $black;
+          text-decoration: none;
+        }
+        &.active, .active {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+
+.main-content {
+  .profile-settings-details {
+    .main-title {
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 0.75px;
+      line-height: 16px;
+      color: $grey-5;
+      margin-bottom: 11px;
+    }
+
+    .title {
+      margin-bottom: 6px;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.63px;
+      line-height: 14px;
+      color: $grey-5;
+    }
+    .bio {
+      padding: 0;
+      position: relative;
+      .character-counter {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 8px;
+        font-weight: 500;
+        line-height: 11px;
+      }
+    }
+    .item-block {
+      margin: 0;
+
+      &.left {
+        padding-left: 0px;
+      }
+      &.right {
+        padding-right: 0px;
+      }
+      .content {
+        margin-bottom: 31px;
+        .icon-container {
+          text-align: left;
+          width: 20px;
+          i {
+            &.agr-page, &.agr-blog {
+              font-size: 14px;
+            }
+            &.agr-profile-user {
+              font-size: 11px;
+            }
+          }
+        }
+
+        input {
+          color: black;
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 16px;
+          letter-spacing: 0.2px;
+          border: none;
+          border-bottom: 2px solid $grey-2;
+          width: calc(100% - 23px);
+          padding-left: 3px;
+          margin-left: 3px;
+          background-color: transparent;
+          &.blur {
+            color: $grey-5;
+          }
+        }
+      }
+
+    }
+
+    .main-info {
+      padding: 0;
+      color: $grey-5;
+
+    }
+    .style {
+      margin-bottom: 20px;
+      .agr-paint-brush {
+        margin-right: 8px;
+      }
+      span {
+        margin-right: 8px;
+      }
+      .agr-arrow-down {
+        font-size: 6px;
+      }
+    }
+    .image {
+      color: $grey-5;
+      padding: 0;
+      margin-bottom: 35px;
+      height: 100%;
+      .col-md-6 {
+        padding: 0;
+        &:first-child {
+          padding-right: 30px;
+        }
+      }
+      .title-block {
+        margin-bottom: 10px;
+        .big-title {
+          font-size: 12px;
+          font-weight: 300;
+          letter-spacing: 0.63px;
+          line-height: 14px;
+        }
+        .small-title {
+          float: right;
+          padding-top: 3px;
+          font-size: 9px;
+          font-weight: 500;
+          line-height: 11px;
+        }
+      }
+      .image-content {
+        margin-bottom: 10px;
+        height: 58px;
+
+      }
+      .avatar {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .cover {
+        overflow: hidden;
+        img {
+          max-width: 100%;
+          height: 100%;
+        }
+      }
+      .section-uploads-selection-file {
+        background-color: white;
+        width: 100%;
+        border: none;
+        font-size: 10px;
+        line-height: 27px;
+        height: 27px;
+        @include respondTo(tabletPortrait tabletLandscape mobile) {
+          display: block !important;
+        }
+        .label-uploads {
+          width: 80px;
+          height: 27px;
+          background-color: $dark;
+          font-size: 10px;
+          font-weight: 300;
+          line-height: 27px;
+        }
+      }
+    }
+    .private-info {
+      .item-block {
+        color: $grey-5;
+
+        i {
+          font-size: 10px;
+        }
+        input {
+          width: 50%;
+          display: inline-block;
+          margin-right: 20px;
+        }
+        span {
+          color: $primary-color;
+          font-size: 10px;
+          font-weight: 300;
+          line-height: 14px;
+        }
+      }
+    }
+    .footer {
+      margin-bottom: 100px;
+      .cancel {
+        color: $primary-color;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 14px;
+        letter-spacing: 1px;
+      }
+      .save {
+        float: right;
+        text-align: center;
+        width: 166px;
+        height: 40px;
+        background-color: $primary-color;
+        border-radius: 2px;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 1px;
+        color: white;
+      }
+    }
+  }
+}

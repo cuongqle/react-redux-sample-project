@@ -1,0 +1,21 @@
+@media (max-width: 670px) {
+  .connect-with-stripe {
+    .main-frame {
+      display: block !important;
+      padding: 20px 20px;
+      .label, .btn {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        width: 100% !important;
+        display: block !important;
+      }
+      .label{
+        margin-bottom: 10px;
+        white-space: normal;
+      }
+      .btn{
+        margin-right: 0px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+//Bootstrap
+$icon-font-path: "/src/assets/fonts/bootstrap/" !default;
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//Font Agora
+@import "../fonts/agora/style";
+
+//Font default
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
+@import "bases/all";
+@import "components/all";
+@import "responsive/all";
